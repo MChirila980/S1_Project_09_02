@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <!--
+    <!--
       New Perspectives on HTML5 and CSS3, 7th Edition
       Tutorial 7
       Case Problem 2
@@ -13,99 +14,293 @@
       Filename:   sb_payment.html
 
    -->
-   
-   <meta charset="utf-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <title>Spice Bowl Payment Form</title>
-   <link href="sb_reset.css" rel="stylesheet" />
-   <link href="sb_styles.css" rel="stylesheet" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spice Bowl Payment Form</title>
+    <link href="sb_reset.css" rel="stylesheet" />
+    <link href="sb_styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="sb_forms.css" />
+    <link rel="stylesheet" href="sb_validate.css" />
+    <script src="sb_script.js"></script>
 </head>
 
 <body>
-   <header>
-      <img src="sb_logo.png" alt="The Spice Bowl" />
+    <header>
+        <img src="sb_logo.png" alt="The Spice Bowl" />
 
-      <nav> <a id="navicon" href="#"><img src="sb_navicon.png" alt="" /></a>
-         <ul>
-            <li><a href="#">Spices</a></li>
-            <li><a href="#">Recipes</a></li>
-            <li><a href="#">My Cart</a></li>
-            <li><a href="#">My Account</a></li>
-            <li><a href="#">Contact Us</a></li>
-         </ul>
-      </nav>
-   </header>
-   
-   <section>
-      <h1>Payment Form</h1>
-      
-      <aside>
-         <h1>Menu Ideas</h1>
-         <h2>Salt-Roasted Pecans</h2>
-         <ul>
-            <li>2 cups pecans</li>
-            <li>3 Tbs. butter, melted</li>
-            <li>1 1/4 tsp. fine sea salt</li>
-         </ul>
-         <p>Preheat oven to 325&deg;. Toss pecans and butter together; 
-            add salt and toss again.  Spread in a single layer on a baking 
-            sheet.  Bake about 15 minutes.  Cook on baking sheet.
-         </p>
 
-         <h2>Dried Beef Sticks</h2>
-         <ul>
-            <li>5 lbs. ground chuck</li>
-            <li>5 Tbs. quick salt</li>
-            <li>3 tsp. mustard seed</li>
-            <li>2 tsp. granulated garlic</li>
-            <li>2 tsp. cracked pepper</li>
-            <li>1 Tbs. hickory smoked salt</li>
-            <li>1 Tbs. liquid smoke</li>
-         </ul>
-         <p>Mix beef and season.  Place in a large covered container 
-            for three days.  
-            On third day, shape beef into sticks, and bake at 150&deg; for 
-            8 hours (turn half-way through).
-         </p>
-      </aside>
-      
-   </section>
+        <nav> <a id="navicon" href="#"><img src="sb_navicon.png" alt="" /></a>
+            <ul>
+                <li><a href="#">Spices</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">My Cart</a></li>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
-   <footer>
-      <nav>
-         <ul>
-            <li class="newgroup"><a href="#">Home</a></li>
-            <li><a href="#">Keyword Search</a></li>
-      
-            <li class="newgroup"><a href="#">Spices</a></li>
-            <li><a href="#">Seasonings</a></li>
-            <li><a href="#">Blends</a></li>
-            <li><a href="#">Salts &amp; Peppers</a></li>
-            <li><a href="#">Popcorn Seasonings</a></li>
-            <li><a href="#">Dip Mixes</a></li>
-            <li><a href="#">Bulk Spices</a></li>
-            <li><a href="#">Extracts</a></li>
-            <li><a href="#">Flavorings</a></li>
-      
-            <li class="newgroup"><a href="#">Spice Jars</a></li>
-            <li><a href="#">Spice Jar Labels</a></li>
-            <li><a href="#">Spice Sets</a></li>
-            <li><a href="#">Mortar &amp; Pestles</a></li>
-      
-            <li class="newgroup"><a href="#">Cookbooks</a></li>
-            <li><a href="#">Online Recipes</a></li>
-            <li><a href="#">Forums</a></li>
-      
-            <li class="newgroup"><a href="#">My Account</a></li>
-            <li><a href="#">Checkout</a></li>
-            <li><a href="#">Order History</a></li>
-            <li><a href="#">Shipping Info</a></li>
-      
-            <li class="newgroup"><a href="#">Tech Support</a></li>
-            <li><a href="#">Hours</a></li>
-            <li><a href="#">Contact Us</a></li>
-         </ul>
-      </nav>
-   </footer>         
+    <section>
+
+        <h1>Payment Form</h1>
+
+        <form id="payment" action=" http://www.example.com/sb/login " method="POST">
+
+            <fieldset id="billing">
+
+                <legend>Billing Information (required)</legend>
+
+                <!-- the first name label and input with the id adn type -->
+
+                <label for="fNanme"> First Name*</label>
+
+                <input type="text" name="fName" id="firstBox" required />
+
+                <!-- the last name label and the input -->
+
+                <label for="lNanme"> Last Name*</label>
+
+                <input type="text" name="lName" id="lastBox" required />
+
+                <!-- street address -->
+
+                <label for="fNanme"> Street Address*</label>
+
+                <input type="text" name="street" id="streetBox" required />
+
+                <!-- the second street address -->
+
+                <label for="fNanme"> Street Address (2)*</label>
+
+                <input type="text" name="street2" id="streetBox2" required />
+
+                <!--  -->
+
+                <label for="fNanme"> City*</label>
+
+                <input type="text" name="city" id="cityBox" required />
+
+                <!--  -->
+
+                <label for="fNanme"> State*</label>
+
+                <input type="text" name="state" id="stateBox" required  list="stateList"/>
+
+                <!--  -->
+                <!-- The regular expression pattern for the zip code: ^\d{5}(-\d{4})?$  -->
+
+                <label for="fNanme"> Zip/ Postal Code*</label>
+
+                <input type="text" name="zip" id="zipBox" required 
+                pattern="^\d{5}(-\d{4})?$ "/>
+
+                <!--  -->
+
+                <label for="fNanme"> Country*</label>
+
+                <input type="text" name="country" id="countryBox" required />
+
+                <!--  -->
+
+                <label for="fNanme"> Phone*</label>
+
+                <input type="text" name="phone" id="phoneBox" required />
+
+<!-- these are the states for the statebox -->
+
+                <datalist id="stateList">
+
+                    <option value="AL" />
+
+                    <option value="AK" />
+
+                    <option value="AZ" />
+
+                    <option value="AR" />
+
+                    <option value="CA" />
+
+                    <option value="CO" />
+
+                    <option value="CT" />
+
+                    <option value="DE" />
+
+                    <option value="FL" />
+
+                    <option value="GA" />
+
+                    <option value="HI" />
+
+                    <option value="ID" />
+
+                    <option value="IL" />
+
+                    <option value="IN" />
+
+                    <option value="IA" />
+
+                    <option value="KS" />
+
+                    <option value="KY" />
+
+                    <option value="LA" />
+
+                    <option value="ME" />
+
+                    <option value="MD" />
+
+                    <option value="MA" />
+                    
+                    <option value="MI" />
+
+                    <option value="MN" />
+
+                    <option value="MS" />
+
+                    <option value="MO" />
+
+                    <option value="MT" />
+
+                    <option value="NV" />
+
+                    <option value="NH" />
+
+                    <option value="NJ" />
+
+                    <option value="NM" />
+
+                    <option value="NY" />
+
+                    <option value="NC" />
+
+                    <option value="ND" />
+
+                    <option value="OH" />
+
+                    <option value="OK" />
+
+                    <option value="OR" />
+
+                    <option value="PA" />
+
+                    <option value="RI" />
+
+                    <option value="SC" />
+
+                    <option value="SD" />
+
+                    <option value="TN" />
+
+                    <option value="TX" />
+
+                    <option value="UT" />
+
+                    <option value="VT" />
+
+                    <option value="VA" />
+
+                    <option value="WA" />
+
+                    <option value="WV" />
+
+                    <option value="WI" />
+
+                    <option value="WY" />
+
+                </datalist>
+            </fieldset>
+
+    <!-- this fieldset is for the credit card number information -->
+
+            <fieldset id="creditcard">
+                <legend>Credit Card (required)</legend>
+
+                <fieldset class="optionGroup">
+
+                    <label class="cardLabel"></label>
+
+
+
+
+
+                </fieldset>
+
+
+
+
+            </fieldset>
+        </form>
+
+        <aside>
+            <h1>Menu Ideas</h1>
+            <h2>Salt-Roasted Pecans</h2>
+            <ul>
+                <li>2 cups pecans</li>
+                <li>3 Tbs. butter, melted</li>
+                <li>1 1/4 tsp. fine sea salt</li>
+            </ul>
+            <p>Preheat oven to 325&deg;. Toss pecans and butter together;
+                add salt and toss again. Spread in a single layer on a baking
+                sheet. Bake about 15 minutes. Cook on baking sheet.
+            </p>
+
+            <h2>Dried Beef Sticks</h2>
+            <ul>
+                <li>5 lbs. ground chuck</li>
+                <li>5 Tbs. quick salt</li>
+                <li>3 tsp. mustard seed</li>
+                <li>2 tsp. granulated garlic</li>
+                <li>2 tsp. cracked pepper</li>
+                <li>1 Tbs. hickory smoked salt</li>
+                <li>1 Tbs. liquid smoke</li>
+            </ul>
+            <p>Mix beef and season. Place in a large covered container
+                for three days.
+                On third day, shape beef into sticks, and bake at 150&deg; for
+                8 hours (turn half-way through).
+            </p>
+        </aside>
+
+    </section>
+
+    <footer>
+        <nav>
+            <ul>
+                <li class="newgroup"><a href="#">Home</a></li>
+                <li><a href="#">Keyword Search</a></li>
+
+                <li class="newgroup"><a href="#">Spices</a></li>
+                <li><a href="#">Seasonings</a></li>
+                <li><a href="#">Blends</a></li>
+                <li><a href="#">Salts &amp; Peppers</a></li>
+                <li><a href="#">Popcorn Seasonings</a></li>
+                <li><a href="#">Dip Mixes</a></li>
+                <li><a href="#">Bulk Spices</a></li>
+                <li><a href="#">Extracts</a></li>
+                <li><a href="#">Flavorings</a></li>
+
+                <li class="newgroup"><a href="#">Spice Jars</a></li>
+                <li><a href="#">Spice Jar Labels</a></li>
+                <li><a href="#">Spice Sets</a></li>
+                <li><a href="#">Mortar &amp; Pestles</a></li>
+
+                <li class="newgroup"><a href="#">Cookbooks</a></li>
+                <li><a href="#">Online Recipes</a></li>
+                <li><a href="#">Forums</a></li>
+
+                <li class="newgroup"><a href="#">My Account</a></li>
+                <li><a href="#">Checkout</a></li>
+                <li><a href="#">Order History</a></li>
+                <li><a href="#">Shipping Info</a></li>
+
+                <li class="newgroup"><a href="#">Tech Support</a></li>
+                <li><a href="#">Hours</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </footer>
 </body>
+
 </html>
