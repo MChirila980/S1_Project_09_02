@@ -85,15 +85,14 @@
 
                 <label for="fNanme"> State*</label>
 
-                <input type="text" name="state" id="stateBox" required  list="stateList"/>
+                <input type="text" name="state" id="stateBox" required list="stateList" />
 
                 <!--  -->
                 <!-- The regular expression pattern for the zip code: ^\d{5}(-\d{4})?$  -->
 
                 <label for="fNanme"> Zip/ Postal Code*</label>
 
-                <input type="text" name="zip" id="zipBox" required 
-                pattern="^\d{5}(-\d{4})?$ "/>
+                <input type="text" name="zip" id="zipBox" required pattern="^\d{5}(-\d{4})?$ " />
 
                 <!--  -->
 
@@ -107,7 +106,7 @@
 
                 <input type="text" name="phone" id="phoneBox" required />
 
-<!-- these are the states for the statebox -->
+                <!-- these are the states for the statebox -->
 
                 <datalist id="stateList">
 
@@ -152,7 +151,7 @@
                     <option value="MD" />
 
                     <option value="MA" />
-                    
+
                     <option value="MI" />
 
                     <option value="MN" />
@@ -212,20 +211,73 @@
                 </datalist>
             </fieldset>
 
-    <!-- this fieldset is for the credit card number information -->
+            <!-- this fieldset is for the credit card number information -->
 
             <fieldset id="creditcard">
                 <legend>Credit Card (required)</legend>
 
                 <fieldset class="optionGroup">
+                    <!--  -->
+                    <label for="cardLabel" class="cardLabel">
+                        <input type="radio" name="ccard" id="ccard" value="Amex" required />
+                        <img src="sb_amex.png" alt="Amex" />
+                    </label>
 
-                    <label class="cardLabel"></label>
+
+                    <label for="cardLabel" class="cardLabel">
+                        <input type="radio" name="ccard" id="ccard" value="Discover" required />
+                        <img src="sb_discover.png" alt="Discover" />
+                    </label>
 
 
+                    <label for="cardLabel" class="cardLabel">
+                        <input type="radio" name="ccard" id="ccard" value="Master" required />
+                        <img src="sb_master.png" alt="Master" />
+                    </label>
 
 
+                    <label for="cardLabel" class="cardLabel">
+                        <input type="radio" name="ccard" id="ccard" value="Visa" required />
+                        <img src="sb_visa.png" alt="Visa" />
+                    </label>
 
+                    <!-- the textbox area so that you can enter in your credit card information. it is required.Has the regular expression pattern. -->
+                    <label for="ccardnumber">Credit Card Number</label>
+                    <input type="text" name="ccardnumber" required pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$
+">
                 </fieldset>
+                <label for="monthlist">Expiration Date</label>
+                <!--  Expiration Date for the card month-->
+                <select name="cardMonth" id="monthList">
+                    <option value="">Month </option>
+                    <option value="1">January (1)</option>
+                    <option value="2">February (2)</option>
+                    <option value="3">March (3)</option>
+                    <option value="4">April (4)</option>
+                    <option value="5">May (5)</option>
+                    <option value="6">June (6)</option>
+                    <option value="7">July (7)</option>
+                    <option value="8">August (8)</option>
+                    <option value="9">September (9)</option>
+                    <option value="10">October (10)</option>
+                    <option value="11">November (11)</option>
+                    <option value="12">December (12)</option>
+
+                </select>
+                <!-- This is the selection box for the expiration year from 2017-2021 -->
+                <select name="cardYear" id="yearList">
+                    <option value="">Year</option>
+                    <option value="2017">2017*</option>
+                    <option value="2018">2018*</option>
+                    <option value="2019">2019*</option>
+                    <option value="2020">2020*</option>
+                    <option value="2021">2021*</option>
+
+                </select>
+                <!--  -->
+                
+
+
 
 
 
