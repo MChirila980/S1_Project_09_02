@@ -75,32 +75,30 @@
 
                 <input type="text" name="street2" id="streetBox2" required />
 
-                <!--  -->
+
 
                 <label for="fNanme"> City*</label>
 
                 <input type="text" name="city" id="cityBox" required />
 
-                <!--  -->
+
 
                 <label for="fNanme"> State*</label>
 
                 <input type="text" name="state" id="stateBox" required list="stateList" />
 
-                <!--  -->
+
                 <!-- The regular expression pattern for the zip code: ^\d{5}(-\d{4})?$  -->
 
                 <label for="fNanme"> Zip/ Postal Code*</label>
 
                 <input type="text" name="zip" id="zipBox" required pattern="^\d{5}(-\d{4})?$ " />
 
-                <!--  -->
 
                 <label for="fNanme"> Country*</label>
 
                 <input type="text" name="country" id="countryBox" required />
 
-                <!--  -->
 
                 <label for="fNanme"> Phone*</label>
 
@@ -217,7 +215,7 @@
                 <legend>Credit Card (required)</legend>
 
                 <fieldset class="optionGroup">
-                    <!--  -->
+
                     <label for="cardLabel" class="cardLabel">
                         <input type="radio" name="ccard" id="ccard" value="Amex" required />
                         <img src="sb_amex.png" alt="Amex" />
@@ -242,7 +240,7 @@
                     </label>
 
                     <!-- the textbox area so that you can enter in your credit card information. it is required.Has the regular expression pattern. -->
-                   
+
                 </fieldset>
                 <label for="ccardnumber">Credit Card Number</label>
                 <input type="text" name="cardnumber" id="cardBox" required pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$
@@ -275,13 +273,14 @@
                     <option value="2021">2021*</option>
 
                 </select>
-                <!--  -->
+                <!-- the subit button  -->
+                <!-- when you complete the form you press the button will aprear as "next" -->
                 <label for="cscBox">CSC</label>
                 <input type="text" id="cscBox" name="csc" pattern="^\d{3}$" maxlength="3" placeholder="nnn" required>
                 <button type="submit"> <img src="sb_button.png" alt="next"> </button>
             </fieldset>
-            <!--  -->
-           
+
+
         </form>
 
 

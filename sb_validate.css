@@ -28,7 +28,3 @@ input:not([type='radio']):focus:valid {
 input:not([type='radio']):focus:invalid {
     background: rgb(250, 175, 178) url(sb_invalid.png) right no-repeat;
 }
-
-
-
-
